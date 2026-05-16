@@ -27,8 +27,6 @@ func main()  {
 	// structs()
 	// pointers()
 
-	TypeDeclared()
-	OpearisMtk()
-	BindingOperation()
+	Arry()
 }
 
