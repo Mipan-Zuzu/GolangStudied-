@@ -29,5 +29,6 @@ func main()  {
 
 	TypeDeclared()
 	OpearisMtk()
+	BindingOperation()
 }
 
