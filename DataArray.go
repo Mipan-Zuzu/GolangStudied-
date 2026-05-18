@@ -21,16 +21,21 @@ func Arry () {
 
 func Slices () {
 	namess := [...]string{"mipan", "zuzu", "cuki", "liar", "rrampe", "Bawdewak"}
-	slice := namess[4:]
+	slice := namess[4:] //slice
 
 	names2 := append(slice, "cukiliar")
 	names3 := len(names2)
 
-	names4 := make([]string, len(namess))
-	copy([6]string(names4),namess)
+	names4 := make([]string, 10)
+	names5 := append(names2, "Woilah")
+	names6 := append(names4, "Ikan goreng")
+	names7 := copy(names4, names2)
 
 	fmt.Println(slice[0])
 	fmt.Println(names2)
 	fmt.Println(names3)
-	fmt.Println(names4)
+	fmt.Println("ini adalah hasil dari make" , names4)
+	fmt.Println(names5)
+	fmt.Println(names6, len(names4))
+	fmt.Println(names7)
 }
