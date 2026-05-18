@@ -1,12 +1,15 @@
 package main
 
-import "fmt"
-import "rsc.io/quote/v4"
+import (
+	"fmt"
+
+	"rsc.io/quote/v4"
+)
 
 var food string
 var hobbies = "gowes"
 
-func main()  {
+func main() {
 	// married := false
 	// food = "burger"
 
@@ -27,6 +30,5 @@ func main()  {
 	// structs()
 	// pointers()
 
-	Arry()
+	condition()
 }
-

@@ -7,30 +7,36 @@ func maps () {
 		"role" : "Admin",
 	}
 
-	//TODO: ambil hanya name
-	fmt.Println(user["name"]) 
+	user["name"] = "Sukis"
+	delete(user, "name")
 
-	//TODO: Tambah data
-	user["age"] = "20"
-	user["role"] = "Owner"
-	user["hobbi"] = "Bersepeda"
+	// fmt.Println(user)
+	fmt.Println(user["name"])
 
-	_, nameOk := user["name"]
-	_, ageOk := user["age"];
+	// //TODO: ambil hanya name
+	// fmt.Println(user["name"]) 
 
-	fmt.Println(nameOk)
+	// //TODO: Tambah data
+	// user["age"] = "20"
+	// user["role"] = "Owner"
+	// user["hobbi"] = "Bersepeda"
 
-	// Todo Cek value age kalo ok lanjut
-	if ageOk {
-		// TODO: Delete
-		delete(user, "age")
-		fmt.Println("berhasil terhapus age nya")
-	}
+	// _, nameOk := user["name"]
+	// _, ageOk := user["age"];
+
+	// fmt.Println(nameOk)
+
+	// // Todo Cek value age kalo ok lanjut
+	// if ageOk {
+	// 	// TODO: Delete
+	// 	delete(user, "age")
+	// 	fmt.Println("berhasil terhapus age nya")
+	// }
 
 
-	// TODO: LOOPING ARRAY
-	for key, value := range user {
-		fmt.Println( key , value)
-	}
+	// // TODO: LOOPING ARRAY
+	// for key, value := range user {
+	// 	fmt.Println( key , value)
+	// }
 
 }
