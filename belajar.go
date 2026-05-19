@@ -30,6 +30,7 @@ func main() {
 	// structs()
 	// pointers()
 
-	Switchs()
-	perulangan()
+	var loop = []string{"finding", "found", "love", "gone", "finding Again"}
+
+	param("Mipan", 17, loop)
 }
