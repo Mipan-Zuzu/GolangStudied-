@@ -30,5 +30,6 @@ func main() {
 	// structs()
 	// pointers()
 
-	condition()
+	Switchs()
+	perulangan()
 }
