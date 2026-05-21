@@ -12,3 +12,7 @@ func param (name string, age int, loop []string) {
 	}
 
 }
+	
+func multiplevalue (name string, age int) (string, int) {
+	return name, age
+}
