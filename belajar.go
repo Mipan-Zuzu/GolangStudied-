@@ -33,4 +33,5 @@ func main() {
 	var loop = []string{"finding", "found", "love", "gone", "finding Again"}
 
 	param("Mipan", 17, loop)
+	tambah(3, 5)
 }

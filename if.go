@@ -10,4 +10,6 @@ func condition() {
 	}
 
 	fmt.Println("dia sudah menikah")
+
+
 }
