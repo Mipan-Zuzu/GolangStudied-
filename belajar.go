@@ -37,4 +37,10 @@ func main() {
 	names, _ := multiplevalue("mipan", 20)
 
 	fmt.Println(names)
+
+	fristname, secondname,_ := namedRetunr()
+
+	fmt.Println(fristname, secondname)
+	result := lopfunc(1,4,5,7,98)
+	fmt.Println(result)
 }

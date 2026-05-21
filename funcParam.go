@@ -12,7 +12,25 @@ func param (name string, age int, loop []string) {
 	}
 
 }
-	
+
 func multiplevalue (name string, age int) (string, int) {
 	return name, age
+}
+
+func namedRetunr () (fristname, secondname, thirdname string) {
+
+	fristname = "mipan"
+	secondname = "suzu"
+	thirdname = "cuki"
+
+	return fristname, secondname, thirdname
+}
+
+func lopfunc (data ...int) int {
+	result := 0
+	for _, a := range data {
+		result += a
+	}
+
+	return result
 }
