@@ -43,4 +43,8 @@ func main() {
 	fmt.Println(fristname, secondname)
 	result := lopfunc(1,4,5,7,98)
 	fmt.Println(result)
+
+	count := []int{22,44,33}
+	totals := lopfunc(count...)
+	fmt.Println(totals)
 }
