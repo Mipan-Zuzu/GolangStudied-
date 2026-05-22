@@ -6,9 +6,6 @@ import (
 	"rsc.io/quote/v4"
 )
 
-var food string
-var hobbies = "gowes"
-
 func main() {
 	// married := false
 	// food = "burger"
@@ -30,23 +27,27 @@ func main() {
 	// structs()
 	// pointers()
 
-	var loop = []string{"finding", "found", "love", "gone", "finding Again"}
+	// var loop = []string{"finding", "found", "love", "gone", "finding Again"}
 
-	param("Mipan", 17, loop)
-	fmt.Println(tambah(3, 5))
-	names, _ := multiplevalue("mipan", 20)
+	// param("Mipan", 17, loop)
+	// fmt.Println(tambah(3, 5))
+	// names, _ := multiplevalue("mipan", 20)
 
-	fmt.Println(names)
+	// fmt.Println(names)
 
-	fristname, secondname,_ := namedRetunr()
+	// fristname, secondname,_ := namedRetunr()
 
-	fmt.Println(fristname, secondname)
-	result := lopfunc(1,4,5,7,98)
+	// fmt.Println(fristname, secondname)
+	// result := lopfunc(1,4,5,7,98)
+	// fmt.Println(result)
+
+	// count := []int{22,44,33}
+	// totals := lopfunc(count...)
+	// fmt.Println(totals)
+	// bay := goodbay
+	// fmt.Println(bay("mipan"))
+	data := 11
+	tampil := tampilkan
+	result := checking(data, tampil)
 	fmt.Println(result)
-
-	count := []int{22,44,33}
-	totals := lopfunc(count...)
-	fmt.Println(totals)
-	bay := goodbay
-	fmt.Println(bay("mipan"))
 }

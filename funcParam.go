@@ -1,9 +1,5 @@
 package main
 import "fmt"
-func tambah (a int, b int) int {
-	return a + b 
-}
-
 func param (name string, age int, loop []string) {
 	fmt.Println("nama saya", name, "umur saya", age)
 
@@ -37,4 +33,17 @@ func lopfunc (data ...int) int {
 
 func goodbay (name string)string {
 	return "goodbay goofy ah" + name
+}
+
+
+func checking (data int,tampilkan func(string) string)string {
+	if data %2 == 0 {
+	 return tampilkan("genap")
+	}
+
+	return tampilkan("ganjil")
+}
+
+func tampilkan (data string) string {
+	return data
 }
