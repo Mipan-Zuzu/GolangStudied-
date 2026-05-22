@@ -33,4 +33,8 @@ func lopfunc (data ...int) int {
 	}
 
 	return result
+}	
+
+func goodbay (name string)string {
+	return "goodbay goofy ah" + name
 }

@@ -47,4 +47,6 @@ func main() {
 	count := []int{22,44,33}
 	totals := lopfunc(count...)
 	fmt.Println(totals)
+	bay := goodbay
+	fmt.Println(bay("mipan"))
 }
