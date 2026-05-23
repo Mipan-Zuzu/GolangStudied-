@@ -84,3 +84,17 @@ func succses () {
 	authorize()
 	fmt.Println("3. succses login")
 }
+
+func endApp () {
+	fmt.Println("aplikasi di hentikan")
+}
+
+func runApp (err bool) {
+	defer endApp()
+	if err {
+		panic("ERROR")
+	}
+}
+func sistem () {
+	fmt.Println("sistem jalan")
+}

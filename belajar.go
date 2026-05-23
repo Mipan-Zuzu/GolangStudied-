@@ -68,5 +68,7 @@ func main() {
 	// fmt.Println(count)
 
 
-	succses()
+	// succses()
+	runApp(true)
+	sistem()
 }
