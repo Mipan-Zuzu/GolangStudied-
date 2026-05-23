@@ -70,5 +70,4 @@ func main() {
 
 	// succses()
 	runApp(true)
-	sistem()
 }

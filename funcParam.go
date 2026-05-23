@@ -87,6 +87,8 @@ func succses () {
 
 func endApp () {
 	fmt.Println("aplikasi di hentikan")
+	message := recover()
+	fmt.Println("terjadi error di ", message)
 }
 
 func runApp (err bool) {
