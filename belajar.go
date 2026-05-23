@@ -70,6 +70,14 @@ func main() {
 
 	// succses()
 	// runApp(true)
-	callUser()
-	Buyer()
+	// callUser()
+	// Buyer()
+
+	// Mipan := Customer{name: "Miapn"}
+	// Cuki := Customer{name: "Cuki"}
+	// Mipan.Greating()
+	// Cuki.Greating()
+	
+	MipanPok := Change{"MipanPok3", 9}
+	MipanPok.sayChange()
 }

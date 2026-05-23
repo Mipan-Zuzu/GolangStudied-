@@ -129,3 +129,25 @@ func Buyer () {
 	Cuki := Users{"Cuki", "syedney", 17, true}
 	fmt.Println(Cuki)
 }
+
+type Customer struct {
+	name string
+}
+
+func (customer Customer) Greating() {
+	fmt.Println("welcome customer", customer.name)
+}
+
+type Change struct {
+	name string
+	money int
+}
+
+func (change Change) sayChange() {
+	barangPrice := 10
+	if change.money <= barangPrice {
+		fmt.Println("maaf uang tidak cukup ", change.name)
+		return
+	}
+		fmt.Println("terimakasi kembali ", change.name)
+}
