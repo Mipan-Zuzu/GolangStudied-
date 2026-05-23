@@ -53,4 +53,6 @@ func main() {
 	}
 
 	chekingGenre("sliceoflife", genre)
+
+	fmt.Println(factorialRecrusive(5))
 }

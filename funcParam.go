@@ -58,3 +58,11 @@ func chekingGenre (genre string, genreType GenreType) {
 
 	fmt.Println("boleh coy")
 }
+
+func factorialRecrusive (value int) int {
+	if value == 1 {
+		return 1
+	} else {
+		return value * factorialRecrusive(value-1)
+	}
+}
