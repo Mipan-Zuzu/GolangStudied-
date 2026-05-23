@@ -48,22 +48,25 @@ func main() {
 	// fmt.Println(bay("mipan"))
 	
 
-	genre := func (name string) bool {
-		return name == "romance"
-	}
+	// genre := func (name string) bool {
+	// 	return name == "romance"
+	// }
 
-	chekingGenre("sliceoflife", genre)
+	// chekingGenre("sliceoflife", genre)
 
-	fmt.Println(factorialRecrusive(5))
+	// fmt.Println(factorialRecrusive(5))
 
-	count := 0
+	// count := 0
 
-	startCount := func () {
-		for i := 0 ; i < 10; i ++ {
-			count += i
-		}
-	}
+	// startCount := func () {
+	// 	for i := 0 ; i < 10; i ++ {
+	// 		count += i
+	// 	}
+	// }
 
-	startCount()
-	fmt.Println(count)
+	// startCount()
+	// fmt.Println(count)
+
+
+	succses()
 }

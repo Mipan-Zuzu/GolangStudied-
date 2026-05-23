@@ -1,5 +1,9 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+
+)
 func param (name string, age int, loop []string) {
 	fmt.Println("nama saya", name, "umur saya", age)
 
@@ -65,4 +69,18 @@ func factorialRecrusive (value int) int {
 	} else {
 		return value * factorialRecrusive(value-1)
 	}
+}
+
+func loggin () {
+	fmt.Println(" 1. User melakukan login")
+}
+
+func authorize () {
+	defer loggin()
+	fmt.Println(" 2. authorization user ")
+}
+
+func succses () {
+	authorize()
+	fmt.Println("3. succses login")
 }
