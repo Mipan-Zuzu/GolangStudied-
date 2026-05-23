@@ -46,8 +46,11 @@ func main() {
 	// fmt.Println(totals)
 	// bay := goodbay
 	// fmt.Println(bay("mipan"))
-	data := 11
-	tampil := tampilkan
-	result := checking(data, tampil)
-	fmt.Println(result)
+	
+
+	genre := func (name string) bool {
+		return name == "romance"
+	}
+
+	chekingGenre("sliceoflife", genre)
 }

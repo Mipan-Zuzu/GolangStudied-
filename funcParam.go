@@ -47,3 +47,14 @@ func checking (data int,tampilkan func(string) string)string {
 func tampilkan (data string) string {
 	return data
 }
+
+type GenreType func(string) bool
+
+func chekingGenre (genre string, genreType GenreType) {
+	if genreType(genre) {
+		fmt.Println("dilarang")
+		return
+	}
+
+	fmt.Println("boleh coy")
+}
