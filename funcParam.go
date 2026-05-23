@@ -100,3 +100,32 @@ func runApp (err bool) {
 func sistem () {
 	fmt.Println("sistem jalan")
 }
+
+type Users struct {
+	name, adres string
+	age int
+	maried bool
+}
+
+func callUser () {
+	var Mipan Users
+	Mipan.name = "Mipan"
+	Mipan.adres = "bali"
+	Mipan.age = 17
+	Mipan.maried = true
+
+	fmt.Println(Mipan)
+}
+
+func Buyer () {
+	Mipan := Users {
+		name: "CukiMipan",
+		adres: "bern",
+		age: 17,
+		maried: true,
+	}
+	fmt.Println(Mipan)
+
+	Cuki := Users{"Cuki", "syedney", 17, true}
+	fmt.Println(Cuki)
+}

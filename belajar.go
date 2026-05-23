@@ -69,5 +69,7 @@ func main() {
 
 
 	// succses()
-	runApp(true)
+	// runApp(true)
+	callUser()
+	Buyer()
 }
