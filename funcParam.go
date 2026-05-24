@@ -204,3 +204,17 @@ func newMap (data string) map[string] string {
 func TypeAssort () interface{} {
 	return 77
 }
+
+type Alamat struct {
+	name , lokasi string 
+	age int
+}
+
+func Pointah () {
+	data := Alamat{"Mipan", "Bali", 17}
+	data2 := &data
+
+	data2.name = "Cuki"
+	fmt.Println(data)
+	fmt.Println(data2)
+}

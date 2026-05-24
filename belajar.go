@@ -99,17 +99,18 @@ func main() {
 	// }
 	// fmt.Println(data)
 
-	ssort := TypeAssort()
+	// ssort := TypeAssort()
 	// ssortString := ssort.(string)
 	// fmt.Println(ssortString)
 
-	switch value := ssort.(type) {
-	case string :
-		fmt.Println("string", value)
-	case int :
-		fmt.Println("int", value)
-	default : 
-		fmt.Println("default")
-	}
+	// switch value := ssort.(type) {
+	// case string :
+	// 	fmt.Println("string", value)
+	// case int :
+	// 	fmt.Println("int", value)
+	// default : 
+	// 	fmt.Println("default")
+	// }
 	
+	Pointah()
 }
