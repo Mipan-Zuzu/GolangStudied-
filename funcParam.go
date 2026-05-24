@@ -202,5 +202,5 @@ func newMap (data string) map[string] string {
 }
 
 func TypeAssort () interface{} {
-	return "Succses"
+	return 77
 }

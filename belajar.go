@@ -100,10 +100,16 @@ func main() {
 	// fmt.Println(data)
 
 	ssort := TypeAssort()
-	ssortString := ssort.(string)
-	fmt.Println(ssortString)
+	// ssortString := ssort.(string)
+	// fmt.Println(ssortString)
 
-	ssortInt := ssort.(int)
-	fmt.Println(ssortInt)
+	switch value := ssort.(type) {
+	case string :
+		fmt.Println("string", value)
+	case int :
+		fmt.Println("int", value)
+	default : 
+		fmt.Println("default")
+	}
 	
 }
