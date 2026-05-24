@@ -1,8 +1,8 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-
 )
 func param (name string, age int, loop []string) {
 	fmt.Println("nama saya", name, "umur saya", age)
@@ -150,4 +150,57 @@ func (change Change) sayChange() {
 		return
 	}
 		fmt.Println("terimakasi kembali ", change.name)
+}
+
+
+
+type Animal interface {
+	Sound()
+}
+
+type Cat struct {
+	Name string
+}
+
+type Dog struct {
+	Name string
+}
+
+func (c Cat) Sound() {
+	fmt.Println(c.Name, "meong")
+}
+
+func (d Dog) Sound() {
+	fmt.Println(d.Name, "Woff")
+}
+
+func Test (a Animal) {
+	a.Sound()
+}
+
+
+
+func TambahCuayo (data interface{} )error {
+	value, typeVal := data.(int)
+	if !typeVal {
+		fmt.Println("data bukan integer")
+		return errors.New("type must int")
+	}
+	
+	fmt.Println(value + 5)
+	return nil
+}
+
+func newMap (data string) map[string] string {
+	if data == "" {
+		return nil
+	}
+
+	return map[string]string {
+		"name" : data,
+	}
+}
+
+func TypeAssort () interface{} {
+	return "Succses"
 }

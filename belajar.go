@@ -78,6 +78,32 @@ func main() {
 	// Mipan.Greating()
 	// Cuki.Greating()
 	
-	MipanPok := Change{"MipanPok3", 9}
-	MipanPok.sayChange()
+	// MipanPok := Change{"MipanPok3", 9}
+	// MipanPok.sayChange()
+	
+	// kucing := Cat{Name:  "Cuki"}
+	// anjing := Dog{Name:  "AmbaCenat"}
+
+	// Test(kucing)
+	// Test(anjing)
+
+	// cuayo := TambahCuayo("dasda")
+	// fmt.Println(cuayo)
+
+	// mapResult := newMap("")
+	// fmt.Println(mapResult)
+
+	// data := newMap("")
+	// if data == nil {
+	// 	fmt.Println("data map kosong")
+	// }
+	// fmt.Println(data)
+
+	ssort := TypeAssort()
+	ssortString := ssort.(string)
+	fmt.Println(ssortString)
+
+	ssortInt := ssort.(int)
+	fmt.Println(ssortInt)
+	
 }
