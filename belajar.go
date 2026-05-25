@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-
+	"belajar.go/helper"
 	"rsc.io/quote/v4"
 )
 
@@ -112,6 +112,6 @@ func main() {
 	// 	fmt.Println("default")
 	// }
 	
-	operatorNew()
-	results()
+	sayHello := helper.SayHello("mipan")
+	fmt.Println(sayHello)
 }

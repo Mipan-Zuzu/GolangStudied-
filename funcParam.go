@@ -243,6 +243,7 @@ func operatorNew () {
 type Registration struct {
 	numbers int
 }
+
 func PointerFunc (data *Registration) {
 	fmt.Println(data)
 }
