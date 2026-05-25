@@ -113,4 +113,5 @@ func main() {
 	// }
 	
 	operatorNew()
+	results()
 }

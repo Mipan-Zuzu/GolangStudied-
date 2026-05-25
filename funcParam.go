@@ -239,3 +239,18 @@ func operatorNew () {
 	fmt.Println(newObj1)
 	fmt.Println(newObj2)
 }
+
+type Registration struct {
+	numbers int
+}
+func PointerFunc (data *Registration) {
+	fmt.Println(data)
+}
+
+func results () {
+	data := Registration{50}
+	result := &data
+	result.numbers = 60
+	PointerFunc(result)
+	PointerFunc(&data)
+}	
