@@ -225,3 +225,17 @@ func asteriskOp (data int) {
 
 	fmt.Println(*count)
 }
+
+type Organitation struct {
+	name string
+}
+
+func operatorNew () {
+	newObj1 := new(Organitation)
+	newObj2 := newObj1
+
+	newObj2.name = "ngaWi"
+
+	fmt.Println(newObj1)
+	fmt.Println(newObj2)
+}

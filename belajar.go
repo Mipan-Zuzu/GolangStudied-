@@ -112,5 +112,5 @@ func main() {
 	// 	fmt.Println("default")
 	// }
 	
-	asteriskOp(50)
+	operatorNew()
 }
