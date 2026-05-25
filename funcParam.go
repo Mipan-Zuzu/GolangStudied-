@@ -218,3 +218,10 @@ func Pointah () {
 	fmt.Println(data)
 	fmt.Println(data2)
 }
+
+func asteriskOp (data int) {
+	result := data + 4
+	count := &result
+
+	fmt.Println(*count)
+}

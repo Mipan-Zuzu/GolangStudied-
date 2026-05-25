@@ -112,5 +112,5 @@ func main() {
 	// 	fmt.Println("default")
 	// }
 	
-	Pointah()
+	asteriskOp(50)
 }
