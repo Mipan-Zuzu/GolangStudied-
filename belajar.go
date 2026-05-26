@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+
+	"belajar.go/database"
+	_ "belajar.go/database"
 	"belajar.go/helper"
 	"rsc.io/quote/v4"
 )
@@ -114,4 +117,7 @@ func main() {
 	
 	sayHello := helper.SayHello("mipan")
 	fmt.Println(sayHello)
+	databases_dat := database.Geterring()
+
+	fmt.Println(databases_dat)
 }
