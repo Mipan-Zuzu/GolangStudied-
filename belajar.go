@@ -1,11 +1,8 @@
 package main
 
 import (
+	"net/http"
 	"fmt"
-
-	"belajar.go/database"
-	_ "belajar.go/database"
-	"belajar.go/helper"
 	"rsc.io/quote/v4"
 )
 
@@ -115,9 +112,27 @@ func main() {
 	// 	fmt.Println("default")
 	// }
 	
-	sayHello := helper.SayHello("mipan")
-	fmt.Println(sayHello)
-	databases_dat := database.Geterring()
+	// sayHello := helper.SayHello("mipan")
+	// fmt.Println(sayHello)
+	// databases_dat := database.Geterring()
 
-	fmt.Println(databases_dat)
+	// fmt.Println(databases_dat)
+
+	// ten, error := Execute(32, 0)
+
+	// fmt.Println(ten, error)
+	// // CheckData(-1)
+
+	// err, _ := 	CheckData(-1)
+
+	// if err != nil {
+	// 	var validationErr *validationError
+
+	// 	if errors.As(err, &validationErr) {
+	// 		fmt.Println("validation", validationErr.Message)
+	// 	}
+	// }		
+		http.HandleFunc("/ping", handlers)
+		http.ListenAndServe(":3000", nil)
+		fmt.Println()
 }

@@ -4,7 +4,8 @@ import (
 	"errors"
 	"fmt"
 )
-func param (name string, age int, loop []string) {
+
+func param(name string, age int, loop []string) {
 	fmt.Println("nama saya", name, "umur saya", age)
 
 	for _, data := range loop {
@@ -13,11 +14,11 @@ func param (name string, age int, loop []string) {
 
 }
 
-func multiplevalue (name string, age int) (string, int) {
+func multiplevalue(name string, age int) (string, int) {
 	return name, age
 }
 
-func namedRetunr () (fristname, secondname, thirdname string) {
+func namedRetunr() (fristname, secondname, thirdname string) {
 
 	fristname = "mipan"
 	secondname = "suzu"
@@ -26,35 +27,34 @@ func namedRetunr () (fristname, secondname, thirdname string) {
 	return fristname, secondname, thirdname
 }
 
-func lopfunc (data ...int) int {
+func lopfunc(data ...int) int {
 	result := 0
 	for _, a := range data {
 		result += a
 	}
 
 	return result
-}	
+}
 
-func goodbay (name string)string {
+func goodbay(name string) string {
 	return "goodbay goofy ah" + name
 }
 
-
-func checking (data int,tampilkan func(string) string)string {
-	if data %2 == 0 {
-	 return tampilkan("genap")
+func checking(data int, tampilkan func(string) string) string {
+	if data%2 == 0 {
+		return tampilkan("genap")
 	}
 
 	return tampilkan("ganjil")
 }
 
-func tampilkan (data string) string {
+func tampilkan(data string) string {
 	return data
 }
 
 type GenreType func(string) bool
 
-func chekingGenre (genre string, genreType GenreType) {
+func chekingGenre(genre string, genreType GenreType) {
 	if genreType(genre) {
 		fmt.Println("dilarang")
 		return
@@ -63,7 +63,7 @@ func chekingGenre (genre string, genreType GenreType) {
 	fmt.Println("boleh coy")
 }
 
-func factorialRecrusive (value int) int {
+func factorialRecrusive(value int) int {
 	if value == 1 {
 		return 1
 	} else {
@@ -71,43 +71,43 @@ func factorialRecrusive (value int) int {
 	}
 }
 
-func loggin () {
+func loggin() {
 	fmt.Println(" 1. User melakukan login")
 }
 
-func authorize () {
+func authorize() {
 	defer loggin()
 	fmt.Println(" 2. authorization user ")
 }
 
-func succses () {
+func succses() {
 	authorize()
 	fmt.Println("3. succses login")
 }
 
-func endApp () {
+func endApp() {
 	fmt.Println("aplikasi di hentikan")
 	message := recover()
 	fmt.Println("terjadi error di ", message)
 }
 
-func runApp (err bool) {
+func runApp(err bool) {
 	defer endApp()
 	if err {
 		panic("ERROR")
 	}
 }
-func sistem () {
+func sistem() {
 	fmt.Println("sistem jalan")
 }
 
 type Users struct {
 	name, adres string
-	age int
-	maried bool
+	age         int
+	maried      bool
 }
 
-func callUser () {
+func callUser() {
 	var Mipan Users
 	Mipan.name = "Mipan"
 	Mipan.adres = "bali"
@@ -117,11 +117,11 @@ func callUser () {
 	fmt.Println(Mipan)
 }
 
-func Buyer () {
-	Mipan := Users {
-		name: "CukiMipan",
-		adres: "bern",
-		age: 17,
+func Buyer() {
+	Mipan := Users{
+		name:   "CukiMipan",
+		adres:  "bern",
+		age:    17,
 		maried: true,
 	}
 	fmt.Println(Mipan)
@@ -139,7 +139,7 @@ func (customer Customer) Greating() {
 }
 
 type Change struct {
-	name string
+	name  string
 	money int
 }
 
@@ -149,10 +149,8 @@ func (change Change) sayChange() {
 		fmt.Println("maaf uang tidak cukup ", change.name)
 		return
 	}
-		fmt.Println("terimakasi kembali ", change.name)
+	fmt.Println("terimakasi kembali ", change.name)
 }
-
-
 
 type Animal interface {
 	Sound()
@@ -174,43 +172,41 @@ func (d Dog) Sound() {
 	fmt.Println(d.Name, "Woff")
 }
 
-func Test (a Animal) {
+func Test(a Animal) {
 	a.Sound()
 }
 
-
-
-func TambahCuayo (data interface{} )error {
+func TambahCuayo(data interface{}) error {
 	value, typeVal := data.(int)
 	if !typeVal {
 		fmt.Println("data bukan integer")
 		return errors.New("type must int")
 	}
-	
+
 	fmt.Println(value + 5)
 	return nil
 }
 
-func newMap (data string) map[string] string {
+func newMap(data string) map[string]string {
 	if data == "" {
 		return nil
 	}
 
-	return map[string]string {
-		"name" : data,
+	return map[string]string{
+		"name": data,
 	}
 }
 
-func TypeAssort () interface{} {
+func TypeAssort() interface{} {
 	return 77
 }
 
 type Alamat struct {
-	name , lokasi string 
-	age int
+	name, lokasi string
+	age          int
 }
 
-func Pointah () {
+func Pointah() {
 	data := Alamat{"Mipan", "Bali", 17}
 	data2 := &data
 
@@ -219,7 +215,7 @@ func Pointah () {
 	fmt.Println(data2)
 }
 
-func asteriskOp (data int) {
+func asteriskOp(data int) {
 	result := data + 4
 	count := &result
 
@@ -230,7 +226,7 @@ type Organitation struct {
 	name string
 }
 
-func operatorNew () {
+func operatorNew() {
 	newObj1 := new(Organitation)
 	newObj2 := newObj1
 
@@ -244,14 +240,42 @@ type Registration struct {
 	numbers int
 }
 
-func PointerFunc (data *Registration) {
+func PointerFunc(data *Registration) {
 	fmt.Println(data)
 }
 
-func results () {
+func results() {
 	data := Registration{50}
 	result := &data
 	result.numbers = 60
 	PointerFunc(result)
 	PointerFunc(&data)
-}	
+}
+
+func Execute(nilai int, pembagian int) (int, error) {
+	if pembagian == 0 {
+		return 0, errors.New("incompatible type 0")
+	}
+
+	return nilai / pembagian, nil
+}
+
+type validationError struct {
+	Message string
+}
+
+func (v *validationError) Error() string {
+	return v.Message
+}
+
+func CheckData(data int) (error, int) {
+	if data < 1 {
+		return &validationError{Message: "data tidak boleh kurang dari 0"}, data
+	}
+
+	return nil, data
+}
+
+type Datass struct {
+	names string
+}
