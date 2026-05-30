@@ -133,6 +133,9 @@ func main() {
 	// 	}
 	// }		
 		http.HandleFunc("/ping", handlers)
+		http.HandleFunc("/api/users", dataSiswa)
+		http.HandleFunc("/api/user/", idSiswa)
+		http.HandleFunc("/api/user", SaveSiswa)
+		http.HandleFunc("/api/user/", updateSiswa)
 		http.ListenAndServe(":3000", nil)
-		fmt.Println()
 }
