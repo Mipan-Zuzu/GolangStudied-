@@ -132,10 +132,10 @@ func main() {
 	// 		fmt.Println("validation", validationErr.Message)
 	// 	}
 	// }		
-		http.HandleFunc("/ping", handlers)
-		http.HandleFunc("/api/users", dataSiswa)
-		http.HandleFunc("/api/user/", idSiswa)
-		http.HandleFunc("/api/user", SaveSiswa)
-		http.HandleFunc("/api/user/", updateSiswa)
+		http.HandleFunc("GET /ping", handlers)
+		http.HandleFunc("GET /api/users", dataSiswa)
+		http.HandleFunc("GET /api/user/", idSiswa)
+		http.HandleFunc("POST /api/user", SaveSiswa)
+		http.HandleFunc("PATCH /api/user/", updateSiswa)
 		http.ListenAndServe(":3000", nil)
 }

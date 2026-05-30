@@ -34,27 +34,27 @@ func dataSiswa(res http.ResponseWriter, req *http.Request) {
 var siswslist []Siswa
 
 type data struct {
-	Id int
+	Id   int
 	Data []Siswa
 }
 
-func idSiswa (res http.ResponseWriter, req *http.Request) {
+func idSiswa(res http.ResponseWriter, req *http.Request) {
 	id := strings.TrimPrefix(req.URL.Path, "/api/user/")
 	result, _ := strconv.Atoi(id)
 	res.Header().Set("Content-Type", "application/json")
 	data := data{
-		Id : result,
-		Data : siswslist,
+		Id:   result,
+		Data: siswslist,
 	}
 	json.NewEncoder(res).Encode(data)
 }
 
 type resultSave struct {
 	Status int
-	Data Siswa
+	Data   Siswa
 }
 
-func SaveSiswa (res http.ResponseWriter, req *http.Request) {
+func SaveSiswa(res http.ResponseWriter, req *http.Request) {
 	if req.Method != "POST" {
 		res.WriteHeader(405)
 		return
@@ -67,20 +67,25 @@ func SaveSiswa (res http.ResponseWriter, req *http.Request) {
 	siswslist = append(siswslist, siswa)
 	var data = resultSave{
 		Status: 200,
-		Data: siswa,
+		Data:   siswa,
 	}
 	json.NewEncoder(res).Encode(data)
 }
 
 type errorType struct {
 	Message string
-	Status int
+	Status  int
 }
 
-func updateSiswa (res http.ResponseWriter, req *http.Request) {
+type EditResult struct {
+	Status int
+	data   Siswa
+}
+
+func updateSiswa(res http.ResponseWriter, req *http.Request) {
 	errorMessage := errorType{
 		Message: "Wrong http req Method",
-		Status: 405,
+		Status:  405,
 	}
 	if req.Method != "PATCH" {
 		res.WriteHeader(405)
@@ -94,10 +99,13 @@ func updateSiswa (res http.ResponseWriter, req *http.Request) {
 	}
 
 	var siswa Siswa
-	result, _ = strconv.Atoi(id)
 	json.NewDecoder(req.Body).Decode(&siswa)
-	
-
-
-
+	result, _ := strconv.Atoi(id)
+	siswslist[result] = siswa
+	data := resultSave{
+		Status: 200,
+		Data:   siswa,
+	}
+	json.NewEncoder(res).Encode(data)
 }
+	
